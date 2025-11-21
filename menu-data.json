@@ -1,0 +1,887 @@
+[
+  {
+    "restaurant": "MASAKALI INDIAN CUISINE",
+    "address": "1234 Curry Lane, Flavor Town, FT 56789",
+    "phone": "(123) 456-7890",
+    "email": "",
+    "category": "Veg Appetizers",
+    "items": [
+      {
+        "title": "CHILLI GOBI",
+        "description": "Cauliflower florets tossed with spices, onion and ginger-garlic paste for a tangy, semi-dry Indo-Chinese treat.",
+        "price": 17,
+        "img": ""
+      },
+      {
+        "title": "ALOO SAMOSA",
+        "description": "Cumin infused potatoes & veggie medley wrapped in white flour pastry deep fried.",
+        "price": 12,
+        "img": ""
+      },
+      {
+        "title": "ALOO TIKKI",
+        "description": "Deep-fried patty of boiled potatoes, peas, and exotic spices.",
+        "price": 12,
+        "img": ""
+      },
+      {
+        "title": "GOBI MANCHURIAN",
+        "description": "Cauliflower, corn flour, soya sauce, vinegar, green chilli, ginger & garlic.",
+        "price": 12,
+        "img": ""
+      },
+      {
+        "title": "CHILLI PANEER",
+        "description": "Paneer fried and tossed in sweet & spicy chilli sauce.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "CHILLI SOYA",
+        "description": "Soya chaap tossed and fried in sweet & chilli sauce.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "GOBI 65",
+        "description": "Cauliflower cooked with curry leaves, chilli oil, ginger and garlic.",
+        "price": 17,
+        "img": ""
+      },
+      {
+        "title": "CHILLI MUSHROOM",
+        "description": "Spicy and tangy mushrooms stir-fried with bell peppers and onions.",
+        "price": 17,
+        "img": ""
+      },
+      {
+        "title": "ONION BHAJI",
+        "description": "Seasoned onions, coated in chickpea flour and deep fried.",
+        "price": 12,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Non-Veg Appetizers",
+    "items": [
+      {
+        "title": "CHICKEN 65",
+        "description": "Boneless chicken cooked with curry leaves, chilli oil, ginger and garlic.",
+        "price": 21,
+        "img": ""
+      },
+      {
+        "title": "CHILLI CHICKEN",
+        "description": "Spicy and tangy chicken stir-fried with bell peppers and onions.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "CHICKEN PAKORA",
+        "description": "Marinated chicken breast coated in chickpea batter and deep fried.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "FISH PAKORA",
+        "description": "Marinated fish coated in chickpea batter and deep fried with a hint of carrom seeds.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "CHICKEN MANCHURIAN",
+        "description": "Fried chicken in sweet, hot & sour manchurian sauce.",
+        "price": 21,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Chaat",
+    "items": [
+      {
+        "title": "RAGDA SAMOSA CHAAT",
+        "description": "Crispy samosas topped with white peas curry, yogurt, and tangy chutneys.",
+        "price": 12,
+        "img": ""
+      },
+      {
+        "title": "RAGDA TIKKI CHAAT",
+        "description": "Golden potato patties with savory white peas curry, tangy chutneys & yogurt.",
+        "price": 10,
+        "img": ""
+      },
+      {
+        "title": "PANI PURI",
+        "description": "Semolina shells with spicy potato, tamarind chutney, and mint water.",
+        "price": 15,
+        "img": ""
+      },
+      {
+        "title": "SEV PURI",
+        "description": "Crispy puris topped with potatoes, onions, chutneys, and crunchy sev.",
+        "price": 15,
+        "img": ""
+      },
+      {
+        "title": "PAPDI CHAAT",
+        "description": "Crispy wafers topped with potatoes, chickpeas, yogurt & chutneys.",
+        "price": 15,
+        "img": ""
+      },
+      {
+        "title": "DAHI PURI",
+        "description": "Crispy puris filled with spiced yogurt, tamarind chutney, and toppings.",
+        "price": 15,
+        "img": ""
+      },
+      {
+        "title": "BHEL PURI",
+        "description": "Puffed rice, sev, chutneys, potatoes, onions, spices.",
+        "price": 15,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Veg Tandoori",
+    "items": [
+      {
+        "title": "MALAI SOYA CHAAP",
+        "description": "Soya chaap marinated in creamy spiced mixture and grilled.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "STUFFED MUSHROOM",
+        "description": "Mushroom stuffed with paneer, walnuts, herbs & spices.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "VEGGIE PLATTER",
+        "description": "Assorted veg tikkas served with onion salad & mint chutney.",
+        "price": 33,
+        "img": ""
+      },
+      {
+        "title": "PANEER TIKKA",
+        "description": "Marinated paneer cubes grilled with spices.",
+        "price": 21,
+        "img": ""
+      },
+      {
+        "title": "HARYALI PANEER",
+        "description": "Paneer marinated in fresh herbs & spices, grilled.",
+        "price": 21,
+        "img": ""
+      },
+      {
+        "title": "MALAI PANEER TIKKA",
+        "description": "Paneer marinated in a creamy sauce with cumin & spices.",
+        "price": 21,
+        "img": ""
+      },
+      {
+        "title": "ACHAARI PANEER TIKKA",
+        "description": "Paneer in pickled yogurt marinade cooked in clay oven.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "PANEER PLATTER",
+        "description": "Paneer grilled in flavorful spices served with chutneys.",
+        "price": 29,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Non-Veg Tandoori",
+    "items": [
+      {
+        "title": "MASAKALI GRAND PLATTER",
+        "description": "Chicken seekh, chicken tikka, malai chicken, shrimp, fish.",
+        "price": 47,
+        "img": ""
+      },
+      {
+        "title": "TANDOORI SHRIMP",
+        "description": "Marinated shrimp grilled in a tandoor with spices.",
+        "price": 29,
+        "img": ""
+      },
+      {
+        "title": "MALAI CHICKEN TIKKA",
+        "description": "Tender chicken in creamy yogurt marinade.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "HARYALI CHICKEN TIKKA",
+        "description": "Chicken marinated in herbs & spices.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "CHICKEN TIKKA",
+        "description": "Marinated chicken grilled with spices.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "CHICKEN SEEKH KEBAB",
+        "description": "Minced seasoned chicken baked in tandoor.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "AFGHANI CHICKEN",
+        "description": "Chicken marinated in creamy yogurt, garlic & ginger.",
+        "price": 21,
+        "img": ""
+      },
+      {
+        "title": "TANDOORI FISH",
+        "description": "Fish fillets grilled in tandoor with spices.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "LAMB SEEKH KEBAB",
+        "description": "Lamb mixed with aromatic spices and grilled.",
+        "price": 24,
+        "img": ""
+      },
+      {
+        "title": "TANDOORI CHICKEN",
+        "description": "Chicken marinated in yogurt, ginger, garlic, spices & lime.",
+        "price": 21,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Veg Curries",
+    "items": [
+      {
+        "title": "METHI MALAI PANEER",
+        "description": "Creamy curry with paneer & fenugreek leaves.",
+        "price": 21,
+        "img": ""
+      },
+      {
+        "title": "DAL MAKHANI",
+        "description": "Slow-cooked black lentils in tomato & cream.",
+        "price": 19,
+        "img": ""
+      },
+      {
+        "title": "BUTTER SOYA",
+        "description": "Soya chaap in creamy tomato butter gravy.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "NAVRATAN KORMA",
+        "description": "Nine-ingredient creamy curry.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "KASHMIRI DUM ALOO",
+        "description": "Baby potatoes cooked with tomatoes, chilies & spices.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "KADAI PANEER",
+        "description": "Paneer with mixed peppers, tomatoes & spices.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "PANEER SAAG",
+        "description": "Paneer cooked in spinach.",
+        "price": 19,
+        "img": ""
+      },
+      {
+        "title": "PANEER LABABDAR",
+        "description": "Paneer in creamy tomato-cashew gravy.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "SHAHI PANEER",
+        "description": "Paneer in nuts, yogurt, cream sauce.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "PANEER BUTTER MASALA",
+        "description": "Paneer simmered in tomato & cream sauce.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "MALAI KOFTA",
+        "description": "Veg kofta balls in creamy tomato gravy.",
+        "price": 24,
+        "img": ""
+      },
+      {
+        "title": "MATAR MUSHROOM",
+        "description": "Mushroom and peas cooked in tomato gravy.",
+        "price": 21,
+        "img": ""
+      },
+      {
+        "title": "ALOO GOBI",
+        "description": "Cauliflower & potatoes sautéed with spices.",
+        "price": 18,
+        "img": ""
+      },
+      {
+        "title": "CHANA MASALA",
+        "description": "Chickpeas cooked in tomato & spices.",
+        "price": 18,
+        "img": ""
+      },
+      {
+        "title": "YELLOW DAL TADKA",
+        "description": "Split lentils cooked with tomatoes & spices.",
+        "price": 18,
+        "img": ""
+      },
+      {
+        "title": "SPINACH DAL",
+        "description": "Lentils with spinach, cooked with herbs.",
+        "price": 19,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Chicken Curries",
+    "items": [
+      {
+        "title": "CHICKEN CURRY",
+        "description": "Boneless chicken cooked with spices.",
+        "price": 21,
+        "img": ""
+      },
+      {
+        "title": "BUTTER CHICKEN",
+        "description": "Creamy spiced tomato sauce with tender chicken.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "CHICKEN SAAG",
+        "description": "Chicken cooked in spinach & herbs.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "CHICKEN TIKKA MASALA",
+        "description": "Chicken tikka cooked in masala gravy.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "CHICKEN KORMA",
+        "description": "Chicken cooked with yogurt & spices.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "KADAI CHICKEN",
+        "description": "Chicken with peppers, onions and ginger.",
+        "price": 23,
+        "img": ""
+      },
+      {
+        "title": "CHICKEN VINDALOO",
+        "description": "Chicken & potato in spicy tamarind gravy.",
+        "price": 23,
+        "img": ""
+      },
+      {
+        "title": "METHI MALAI CHICKEN",
+        "description": "Chicken in rich creamy fenugreek sauce.",
+        "price": 23,
+        "img": ""
+      },
+      {
+        "title": "CHICKEN LABABDAR",
+        "description": "Chicken in mildly sweet creamy gravy.",
+        "price": 23,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Lamb Curries",
+    "items": [
+      {
+        "title": "LAMB CURRY",
+        "description": "Tender lamb pieces simmered in rich gravy.",
+        "price": 23,
+        "img": ""
+      },
+      {
+        "title": "LAMB VINDALOO",
+        "description": "Lamb and potato in sour, spicy tamarind gravy.",
+        "price": 25,
+        "img": ""
+      },
+      {
+        "title": "KADAI LAMB",
+        "description": "Lamb cooked with peppers, tomatoes & yogurt.",
+        "price": 25,
+        "img": ""
+      },
+      {
+        "title": "LAMB SAAG",
+        "description": "Lamb cooked with spinach.",
+        "price": 24,
+        "img": ""
+      },
+      {
+        "title": "LAMB KORMA",
+        "description": "Lamb in creamy cashew gravy.",
+        "price": 24,
+        "img": ""
+      },
+      {
+        "title": "LAMB MASALA",
+        "description": "Lamb in thick spiced gravy.",
+        "price": 24,
+        "img": ""
+      },
+      {
+        "title": "METHI MALAI LAMB",
+        "description": "Lamb cooked with fenugreek, yogurt & cream.",
+        "price": 25,
+        "img": ""
+      },
+      {
+        "title": "LAMB ROGAN GOSH",
+        "description": "Lamb cooked in Kashmiri style with yogurt & spices.",
+        "price": 24,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Seafood Curries",
+    "items": [
+      {
+        "title": "GOAN FISH CURRY",
+        "description": "Fish cooked in rich aromatic tomato & coconut curry.",
+        "price": 35,
+        "img": ""
+      },
+      {
+        "title": "BUTTER SHRIMP CURRY",
+        "description": "Shrimp cooked in creamy tomato-cashew gravy.",
+        "price": 32,
+        "img": ""
+      },
+      {
+        "title": "GOAN SHRIMP CURRY",
+        "description": "Shrimp in tangy spiced coconut milk gravy.",
+        "price": 32,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Rice & Biryani",
+    "items": [
+      {
+        "title": "STEAM BASMATI RICE",
+        "description": "Perfectly steamed basmati rice.",
+        "price": 7,
+        "img": ""
+      },
+      {
+        "title": "JEERA RICE",
+        "description": "Rice tossed with cumin & onions.",
+        "price": 12,
+        "img": ""
+      },
+      {
+        "title": "PEAS PULAO",
+        "description": "Rice with sautéed peas, onions & spices.",
+        "price": 12,
+        "img": ""
+      },
+      {
+        "title": "KASHMIRI PULAO",
+        "description": "Rice with toasted nuts & spices.",
+        "price": 16,
+        "img": ""
+      },
+      {
+        "title": "VEGETABLE BIRYANI",
+        "description": "Marinated vegetables cooked with basmati rice.",
+        "price": 18,
+        "img": ""
+      },
+      {
+        "title": "CHICKEN DUM BIRYANI",
+        "description": "Chicken marinated & steam cooked with rice.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "PANEER 65 BIRYANI",
+        "description": "Paneer biryani with special spices.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "CHILLI PANEER BIRYANI",
+        "description": "Paneer cooked with chilli spices layered in rice.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "CHICKEN 65 BIRYANI",
+        "description": "Crispy chicken 65 layered with rice.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "SHAHI GOSHT BIRYANI",
+        "description": "Royal mutton biryani.",
+        "price": 22,
+        "img": ""
+      },
+      {
+        "title": "BUTTER CHICKEN BIRYANI",
+        "description": "Butter chicken layered with biryani rice.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "PANEER BIRYANI",
+        "description": "Paneer biryani with herbs.",
+        "price": 18,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Kids Menu",
+    "items": [
+      {
+        "title": "KIDS BUTTER CHICKEN",
+        "description": "Served with rice and drink.",
+        "price": 7,
+        "img": ""
+      },
+      {
+        "title": "KIDS SHAHI PANEER",
+        "description": "Served with rice and drink.",
+        "price": 7,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Drinks",
+    "items": [
+      {
+        "title": "SALT LASSI",
+        "description": "Traditional yogurt drink.",
+        "price": 6,
+        "img": ""
+      },
+      {
+        "title": "SWEET LASSI",
+        "description": "Sweet yogurt drink.",
+        "price": 6,
+        "img": ""
+      },
+      {
+        "title": "MASALA LASSI",
+        "description": "Spiced yogurt drink.",
+        "price": 6,
+        "img": ""
+      },
+      {
+        "title": "MANGO LASSI",
+        "description": "Mango yogurt drink.",
+        "price": 6,
+        "img": ""
+      },
+      {
+        "title": "LIME SODA",
+        "description": "Fresh lime soda.",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "MASALA SODA",
+        "description": "Spiced soda.",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "PERRIER WATER",
+        "description": "",
+        "price": 6,
+        "img": ""
+      },
+      {
+        "title": "SPRING WATER",
+        "description": "",
+        "price": 4,
+        "img": ""
+      },
+      {
+        "title": "TEA",
+        "description": "",
+        "price": 2,
+        "img": ""
+      },
+      {
+        "title": "COFFEE",
+        "description": "",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "COKE / ZERO / DIET",
+        "description": "",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "SPRITE / GINGER ALE",
+        "description": "",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "RED BULL",
+        "description": "",
+        "price": 6,
+        "img": ""
+      },
+      {
+        "title": "CORONA NON-ALCOHOLIC",
+        "description": "",
+        "price": 6,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Breads",
+    "items": [
+      {
+        "title": "PLAIN NAAN",
+        "description": "",
+        "price": 4,
+        "img": ""
+      },
+      {
+        "title": "BUTTER NAAN",
+        "description": "",
+        "price": 4,
+        "img": ""
+      },
+      {
+        "title": "GARLIC NAAN",
+        "description": "",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "CHILLI NAAN",
+        "description": "",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "METHI NAAN",
+        "description": "",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "KALONJI NAAN",
+        "description": "",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "CHILLI ROTI",
+        "description": "",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "CHILLI GARLIC NAAN",
+        "description": "",
+        "price": 6,
+        "img": ""
+      },
+      {
+        "title": "ONION CHILLI NAAN",
+        "description": "",
+        "price": 6,
+        "img": ""
+      },
+      {
+        "title": "LACHA PARATHA",
+        "description": "",
+        "price": 7,
+        "img": ""
+      },
+      {
+        "title": "AMRITSARI KULCHA",
+        "description": "",
+        "price": 9,
+        "img": ""
+      },
+      {
+        "title": "CHOLLE BHATURE",
+        "description": "",
+        "price": 16,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Extras",
+    "items": [
+      {
+        "title": "GULAB JAMUN",
+        "description": "Deep-fried milk balls soaked in sugar syrup.",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "BOONDHI RAITHA",
+        "description": "",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "MINT CHUTNEY",
+        "description": "",
+        "price": 2,
+        "img": ""
+      },
+      {
+        "title": "RAITHA",
+        "description": "",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "SALAN",
+        "description": "",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "EXTRA BHATURA",
+        "description": "",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "TAMARIND CHUTNEY",
+        "description": "",
+        "price": 5,
+        "img": ""
+      },
+      {
+        "title": "PAPADUM",
+        "description": "",
+        "price": 2,
+        "img": ""
+      }
+    ]
+  },
+
+  {
+    "category": "Vegan Menu Categories",
+    "items": [
+      {
+        "title": "CHILLI GOBI (Vegan)",
+        "description": "Cauliflower cooked with oriental tang.",
+        "price": 17,
+        "img": ""
+      },
+      {
+        "title": "ALOO SAMOSA (Vegan)",
+        "description": "",
+        "price": 12,
+        "img": ""
+      },
+      {
+        "title": "CHILLI SOYA (Vegan)",
+        "description": "",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "PANI PURI (Vegan)",
+        "description": "",
+        "price": 15,
+        "img": ""
+      },
+      {
+        "title": "ONION BHAJI (Vegan)",
+        "description": "",
+        "price": 12,
+        "img": ""
+      },
+      {
+        "title": "OKRA MASALA",
+        "description": "Okra cooked with onions, tomatoes & spices.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "MIX VEG (Vegan)",
+        "description": "Mix vegetables in dairy-free gravy.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "CHANNA SAAG (Vegan)",
+        "description": "Chickpeas cooked with spinach & spices.",
+        "price": 20,
+        "img": ""
+      },
+      {
+        "title": "RICE VARIETIES (Vegan)",
+        "description": "",
+        "price": 12,
+        "img": ""
+      }
+    ]
+  }
+]

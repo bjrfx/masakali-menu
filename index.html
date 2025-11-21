@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masakali Restobar - Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <img src="logo.png" alt="Masakali Logo" class="logo-img">
+                <h1 class="logo">Masakali Indian Cuisine</h1>
+                <p class="tagline">Authentic Indian Cuisine</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="hero-title">Discover Our Menu</h2>
+            <p class="hero-subtitle">Explore the finest flavors of India</p>
+        </div>
+    </section>
+
+    <!-- Menu Controls -->
+    <section class="menu-controls">
+        <div class="container">
+            <!-- Mobile Toggle Button -->
+            <button class="mobile-toggle" id="mobileToggle" onclick="toggleFilters()">
+                <span class="toggle-text">Filters & Search</span>
+                <span class="toggle-icon">▼</span>
+            </button>
+
+            <!-- Filters Container -->
+            <div class="filters-container" id="filtersContainer">
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search for dishes..."
+                    >
+                    <span class="search-icon">🔍</span>
+                </div>
+
+                <!-- Filters and Sort -->
+                <div class="controls-row">
+                    <!-- Category Filter -->
+                    <div class="filter-group">
+                        <label for="categoryFilter" class="filter-label">Category:</label>
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="all">All Categories</option>
+                        </select>
+                    </div>
+
+                    <!-- Dietary Filter -->
+                    <div class="filter-group">
+                        <label for="dietaryFilter" class="filter-label">Dietary:</label>
+                        <select id="dietaryFilter" class="filter-select">
+                            <option value="all">All Items</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="non-vegetarian">Non-Vegetarian</option>
+                        </select>
+                    </div>
+
+                    <!-- Spice Level Filter -->
+                    <div class="filter-group">
+                        <label for="spiceFilter" class="filter-label">Spice Level:</label>
+                        <select id="spiceFilter" class="filter-select">
+                            <option value="all">All Levels</option>
+                            <option value="0">Mild</option>
+                            <option value="1">Medium</option>
+                            <option value="2">Spicy</option>
+                            <option value="3">Extra Spicy</option>
+                        </select>
+                    </div>
+
+                    <!-- Sort Options -->
+                    <div class="filter-group">
+                        <label for="sortSelect" class="filter-label">Sort By:</label>
+                        <select id="sortSelect" class="filter-select">
+                            <option value="default">Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name-az">Name: A to Z</option>
+                            <option value="name-za">Name: Z to A</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Results Counter -->
+                <div class="results-info">
+                    <p id="resultsCount" class="results-text">Showing <span id="count">0</span> items</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Category Indicator -->
+    <div class="category-indicator" id="categoryIndicator">
+        <div class="container">
+            <p id="currentCategory">All Categories</p>
+        </div>
+    </div>
+
+    <!-- Menu Grid -->
+    <main class="menu-section">
+        <div class="container">
+            <div id="menuGrid" class="menu-grid">
+                <!-- Menu items will be dynamically inserted here -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <p>😕 No items found matching your criteria.</p>
+                <button onclick="resetFilters()" class="reset-button">Reset Filters</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Masakali Indian Cuisine. All rights reserved.</p>
+            <p>📍 Ottawa, ON | 📞 (123) 456-7890</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
