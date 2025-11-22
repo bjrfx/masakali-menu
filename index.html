@@ -32,6 +32,12 @@
     <!-- Menu Controls -->
     <section class="menu-controls">
         <div class="container">
+            <!-- Desktop Toggle Button -->
+            <button class="desktop-toggle" id="desktopToggle" onclick="toggleFilters()">
+                <span class="toggle-text">Filters & Search</span>
+                <span class="toggle-icon">▼</span>
+            </button>
+
             <!-- Mobile Toggle Button -->
             <button class="mobile-toggle" id="mobileToggle" onclick="toggleFilters()">
                 <span class="toggle-text">Filters & Search</span>
@@ -133,6 +139,11 @@
             <p>📍 Ottawa, ON | 📞 (123) 456-7890</p>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+        <span class="scroll-icon">↑</span>
+    </button>
 
     <!-- JavaScript -->
     <script src="app.js"></script>

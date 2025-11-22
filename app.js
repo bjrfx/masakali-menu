@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         displayMenuItems(menuData);
         updateResultsCount(menuData.length);
         setupScrollTracking();
+        initializeFiltersState();
     } catch (error) {
         console.error('Error initializing app:', error);
         showError('Failed to load menu data. Please refresh the page.');
@@ -465,15 +466,46 @@ function scrollToMenu() {
 }
 
 // ==========================================
-// Mobile Toggle for Filters
+// Toggle for Filters (Desktop and Mobile)
 // ==========================================
+function initializeFiltersState() {
+    const filtersContainer = document.getElementById('filtersContainer');
+    
+    // Check if we're on mobile (width < 768px)
+    if (window.innerWidth <= 768) {
+        // On mobile/tablet, start collapsed
+        filtersContainer.classList.remove('open');
+    } else {
+        // On desktop, start expanded
+        filtersContainer.classList.add('open');
+    }
+}
+
 function toggleFilters() {
     const filtersContainer = document.getElementById('filtersContainer');
-    const toggleIcon = document.querySelector('.toggle-icon');
+    const toggleIcons = document.querySelectorAll('.toggle-icon');
     
     filtersContainer.classList.toggle('open');
-    toggleIcon.classList.toggle('open');
+    
+    // Update all toggle icons (desktop and mobile)
+    toggleIcons.forEach(icon => {
+        icon.classList.toggle('open');
+    });
 }
+
+// Reinitialize on window resize
+window.addEventListener('resize', () => {
+    const filtersContainer = document.getElementById('filtersContainer');
+    const toggleIcons = document.querySelectorAll('.toggle-icon');
+    
+    if (window.innerWidth > 768) {
+        // On desktop, ensure filters are open
+        if (!filtersContainer.classList.contains('open')) {
+            filtersContainer.classList.add('open');
+            toggleIcons.forEach(icon => icon.classList.remove('open'));
+        }
+    }
+});
 
 // ==========================================
 // Scroll Tracking for Category Indicator
@@ -528,8 +560,31 @@ function scrollToMenu() {
 }
 
 // ==========================================
+// Scroll to Top Functionality
+// ==========================================
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Show/Hide Scroll to Top Button
+window.addEventListener('scroll', () => {
+    const scrollButton = document.getElementById('scrollToTop');
+    
+    // Show button when user scrolls down 300px
+    if (window.pageYOffset > 300) {
+        scrollButton.classList.add('visible');
+    } else {
+        scrollButton.classList.remove('visible');
+    }
+});
+
+// ==========================================
 // Export functions for HTML onclick handlers
 // ==========================================
 window.resetFilters = resetFilters;
 window.scrollToMenu = scrollToMenu;
 window.toggleFilters = toggleFilters;
+window.scrollToTop = scrollToTop;
