@@ -115,6 +115,80 @@ body {
     text-transform: uppercase;
     color: var(--accent-light);
     text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+}
+
+/* Book a Table Button */
+.book-table-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--text-white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 24px rgba(212, 112, 26, 0.4);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 165, 0, 0.3);
+}
+
+.book-table-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.book-table-btn:hover::before {
+    left: 100%;
+}
+
+.book-table-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 32px rgba(212, 112, 26, 0.5);
+    border-color: var(--accent-light);
+}
+
+.book-table-btn:active {
+    transform: translateY(-1px) scale(1.03);
+}
+
+.btn-icon {
+    font-size: 1.3rem;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+}
+
+.btn-text {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-arrow {
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.book-table-btn:hover .btn-arrow {
+    transform: translateX(5px);
 }
 
 /* ==========================================
@@ -874,6 +948,203 @@ body {
     line-height: 1;
     position: relative;
     z-index: 1;
+}
+
+/* ==========================================
+   Liquid Glass Category Indicator
+   ========================================== */
+.liquid-glass-indicator {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    max-width: 900px;
+    z-index: 900;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.liquid-glass-indicator.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.indicator-container {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.12),
+        0 2px 8px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.indicator-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8) 30%,
+        rgba(255, 255, 255, 0.8) 70%,
+        transparent
+    );
+    opacity: 0.6;
+}
+
+.indicator-track {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    padding: 0.25rem 0;
+}
+
+.indicator-track::-webkit-scrollbar {
+    display: none;
+}
+
+.category-indicator-item {
+    position: relative;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(44, 44, 44, 0.7);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    border: 1px solid transparent;
+    letter-spacing: 0.3px;
+    user-select: none;
+}
+
+.category-indicator-item:hover {
+    color: var(--primary-color);
+    background: rgba(212, 112, 26, 0.08);
+    border-color: rgba(212, 112, 26, 0.15);
+    transform: translateY(-2px);
+}
+
+.category-indicator-item.active {
+    color: var(--text-white);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 50%, var(--secondary-color) 100%);
+    border-color: rgba(212, 112, 26, 0.4);
+    box-shadow: 
+        0 4px 16px rgba(139, 0, 0, 0.25),
+        0 2px 8px rgba(212, 112, 26, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px) scale(1.05);
+    font-weight: 700;
+}
+
+.category-indicator-item.active::before {
+    content: '◆';
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-color);
+    font-size: 0.7rem;
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 8px rgba(255, 165, 0, 0.6);
+    }
+    50% {
+        opacity: 0.7;
+        text-shadow: 0 0 12px rgba(255, 165, 0, 0.8);
+    }
+}
+
+.category-indicator-item.active {
+    padding-left: 2.25rem;
+}
+
+/* Gradient fade edges for scrollable track */
+.indicator-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.85), transparent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.indicator-container.has-scroll::after {
+    opacity: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .liquid-glass-indicator {
+        width: 90%;
+        bottom: 90px;
+    }
+
+    .indicator-container {
+        padding: 0.6rem 1rem;
+    }
+
+    .category-indicator-item {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .category-indicator-item.active {
+        padding-left: 2rem;
+    }
+
+    .category-indicator-item.active::before {
+        left: 0.6rem;
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .liquid-glass-indicator {
+        width: 95%;
+    }
+
+    .indicator-container {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .category-indicator-item {
+        padding: 0.45rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .category-indicator-item.active {
+        padding-left: 1.75rem;
+    }
 }
 
 /* ==========================================

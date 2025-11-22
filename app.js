@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         updateResultsCount(menuData.length);
         setupScrollTracking();
         initializeFiltersState();
+        initializeLiquidGlassIndicator();
     } catch (error) {
         console.error('Error initializing app:', error);
         showError('Failed to load menu data. Please refresh the page.');
@@ -299,6 +300,9 @@ function displayMenuItems(items) {
         categorySection.appendChild(grid);
         menuGrid.appendChild(categorySection);
     });
+
+    // Reinitialize liquid glass indicator after displaying items
+    reinitializeLiquidGlassIndicator();
 }
 
 // ==========================================
@@ -588,3 +592,148 @@ window.resetFilters = resetFilters;
 window.scrollToMenu = scrollToMenu;
 window.toggleFilters = toggleFilters;
 window.scrollToTop = scrollToTop;
+
+// ==========================================
+// Liquid Glass Category Indicator
+// ==========================================
+function initializeLiquidGlassIndicator() {
+    const indicator = document.getElementById('liquidGlassIndicator');
+    const indicatorTrack = document.getElementById('indicatorTrack');
+    
+    // Clear existing items
+    indicatorTrack.innerHTML = '';
+    
+    // Get all category sections
+    const categorySections = document.querySelectorAll('.category-section');
+    
+    if (categorySections.length === 0) {
+        indicator.classList.remove('visible');
+        return;
+    }
+    
+    // Create indicator items for each category
+    categorySections.forEach((section, index) => {
+        const categoryName = section.getAttribute('data-category');
+        
+        const item = document.createElement('div');
+        item.className = 'category-indicator-item';
+        item.textContent = categoryName;
+        item.setAttribute('data-category', categoryName);
+        item.setAttribute('data-index', index);
+        
+        // Click to scroll to category
+        item.addEventListener('click', () => {
+            section.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start',
+                inline: 'nearest'
+            });
+        });
+        
+        indicatorTrack.appendChild(item);
+    });
+    
+    // Setup scroll tracking for indicator
+    setupLiquidGlassScrollTracking();
+    
+    // Check if track needs scroll and add class
+    checkIndicatorScroll();
+    
+    // Show indicator after a short delay
+    setTimeout(() => {
+        indicator.classList.add('visible');
+    }, 600);
+}
+
+function setupLiquidGlassScrollTracking() {
+    const indicator = document.getElementById('liquidGlassIndicator');
+    const indicatorTrack = document.getElementById('indicatorTrack');
+    const indicatorItems = document.querySelectorAll('.category-indicator-item');
+    const categorySections = document.querySelectorAll('.category-section');
+    const menuSection = document.querySelector('.menu-section');
+    
+    let scrollTimeout;
+    
+    window.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        
+        // Check if we're in the menu section
+        if (!menuSection) return;
+        
+        const menuRect = menuSection.getBoundingClientRect();
+        const isInMenu = menuRect.top < window.innerHeight - 150 && menuRect.bottom > 150;
+        
+        if (isInMenu && categorySections.length > 0) {
+            indicator.classList.add('visible');
+            
+            // Find active category
+            let activeIndex = 0;
+            let closestDistance = Infinity;
+            
+            categorySections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                const sectionMiddle = rect.top + rect.height / 2;
+                const viewportMiddle = window.innerHeight / 2;
+                const distance = Math.abs(sectionMiddle - viewportMiddle);
+                
+                if (distance < closestDistance && rect.top < window.innerHeight && rect.bottom > 0) {
+                    closestDistance = distance;
+                    activeIndex = index;
+                }
+            });
+            
+            // Update active indicator item
+            indicatorItems.forEach((item, index) => {
+                if (index === activeIndex) {
+                    item.classList.add('active');
+                    
+                    // Auto-scroll indicator track to show active item
+                    const itemRect = item.getBoundingClientRect();
+                    const trackRect = indicatorTrack.getBoundingClientRect();
+                    
+                    if (itemRect.left < trackRect.left || itemRect.right > trackRect.right) {
+                        item.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest',
+                            inline: 'center'
+                        });
+                    }
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        } else {
+            indicator.classList.remove('visible');
+        }
+        
+        scrollTimeout = setTimeout(() => {
+            // Optional: Additional logic after scroll stops
+        }, 100);
+    });
+}
+
+function checkIndicatorScroll() {
+    const indicatorContainer = document.querySelector('.indicator-container');
+    const indicatorTrack = document.getElementById('indicatorTrack');
+    
+    if (indicatorTrack && indicatorContainer) {
+        const hasScroll = indicatorTrack.scrollWidth > indicatorTrack.clientWidth;
+        if (hasScroll) {
+            indicatorContainer.classList.add('has-scroll');
+        } else {
+            indicatorContainer.classList.remove('has-scroll');
+        }
+    }
+}
+
+// Reinitialize indicator when menu is filtered/updated
+function reinitializeLiquidGlassIndicator() {
+    setTimeout(() => {
+        initializeLiquidGlassIndicator();
+    }, 100);
+}
+
+// Update on window resize
+window.addEventListener('resize', () => {
+    checkIndicatorScroll();
+});
