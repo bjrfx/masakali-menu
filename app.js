@@ -475,14 +475,8 @@ function scrollToMenu() {
 function initializeFiltersState() {
     const filtersContainer = document.getElementById('filtersContainer');
     
-    // Check if we're on mobile (width < 768px)
-    if (window.innerWidth <= 768) {
-        // On mobile/tablet, start collapsed
-        filtersContainer.classList.remove('open');
-    } else {
-        // On desktop, start expanded
-        filtersContainer.classList.add('open');
-    }
+    // Start collapsed on all devices by default
+    filtersContainer.classList.remove('open');
 }
 
 function toggleFilters() {

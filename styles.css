@@ -350,33 +350,14 @@ body {
 .filters-container {
     overflow: hidden;
     transition: max-height 0.4s ease, opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
 }
 
-/* Desktop: filters open by default, collapsible */
-@media (min-width: 769px) {
-    .filters-container {
-        max-height: 2000px;
-        opacity: 1;
-    }
-    
-    .filters-container:not(.open) {
-        max-height: 0;
-        opacity: 0;
-        margin-top: 0;
-    }
-}
-
-/* Mobile/Tablet: filters closed by default */
-@media (max-width: 768px) {
-    .filters-container {
-        max-height: 0;
-        opacity: 0;
-    }
-    
-    .filters-container.open {
-        max-height: 2000px;
-        opacity: 1;
-    }
+/* Filters closed by default on all devices */
+.filters-container.open {
+    max-height: 2000px;
+    opacity: 1;
 }
 
 /* Category Indicator */
